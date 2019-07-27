@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+    <head>
+
+        <meta charset = "UTF-8">
+
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <title>Selected Metrics Radar Chart</title>
+
+    </head>
+
+<body>
+
+    <div class="container">
+
+        <canvas id="myChart"></canvas>
+
+    </div>
+
+<script>
+
+    let myChart = document.getElementById('myChart').getContext('2d');
+
+
+
+    let massPopChart = new Chart(myChart, {
+
+        type: 'radar', //we can have bar, horizontalbar, pie, line, doughnut, radar, polarArea
+
+        data: {
+
+            labels:["Black", "White", "Asian", "Hispanic", "Other"],
+
+            datasets:[{
+
+                label:'High School Graduation',
+
+                data:[80.9604119, 85.9650655, 91.97375328, 79.69891068, 84.30234604],
+
+                backgroundColor: ['rgba(0,0,200,0.2'],
+
+                borderWidth:1.5,
+
+                hoverBackgroundColor: "black",
+
+                borderColor:"blue",
+
+                hoverBorderWidth: 1.5,
+
+                hoverBorderColor: "black"
+
+            },
+
+            { label:'Limited Access to Healthy Foods',
+
+                data:[59.5248, 63.092,61.5274, 57.237, 57.3936],
+
+                backgroundColor: ['rgba(224, 0, 0, 0.2'],
+
+                borderWidth:1.5,
+
+                borderColor:"blue",
+
+                hoverBackgroundColor: "black",
+
+                hoverBorderWidth: 1.5,
+
+                hoverBorderColor: "black"
+
+
+
+            },
+
+            {label:'Park Access',
+
+                data:[62.4196, 59.5354, 57.615, 61.9518, 62.1688],
+
+                backgroundColor: ['rgba(0, 222, 22, 0.2'],
+
+                borderWidth:1.5,
+
+                borderColor:"blue",
+
+                hoverBackgroundColor: "black",
+
+                hoverBorderWidth: 1.5,
+
+                hoverBorderColor: "black"
+
+
+
+            },
+
+            {label:'Prenatal Care',
+
+                data:[70.56598174,83.96157205, 77.63539823, 73.80244444, 66],
+
+                backgroundColor: ['rgba(12, 12, 44, 0.2'],
+
+                borderWidth:1.5,
+
+                borderColor:"blue",
+
+                hoverBackgroundColor: "black",
+
+                hoverBorderWidth: 1.5,
+
+                hoverBorderColor: "black"
+
+
+
+            },
+
+            {label:'Unemployment',
+
+                data:[11.3102, 5.8516, 5.568591224, 7.4188, 8.813078471],
+
+                backgroundColor: ['rgba(224, 16, 256, 0.2'], 
+
+                borderWidth:1.5,
+
+                borderColor:"blue",
+
+                hoverBackgroundColor: "black",
+
+                hoverBorderWidth: 1.5,
+
+                hoverBorderColor: "black"
+
+
+
+            },
+
+            ]
+
+        },
+
+        options:{
+
+            title:{
+
+                display:true,
+
+                text:'500 Cities: Selected Metrics by Race',
+
+                fontSize:25   
+
+            },
+
+            legend:{
+
+                display:true,
+
+                position:'bottom',
+
+                labels:{
+
+                    fontColor:"teal"
+
+                }
+
+            },
+
+            layout:{
+
+                padding:{
+
+                    left:0,
+
+                    right:0,
+
+                    bottom:0,
+
+                    top:0
+
+                }
+
+            },
+
+            tooltips:{
+
+                enabled:true
+
+            }
+
+        }
+
+    });
+
+</script>
+
+
+
+</body>
+
+
+
+</html>
